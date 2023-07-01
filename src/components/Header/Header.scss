@@ -1,15 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
 .logo {
     width: 120px;
     border-radius: 50%;
     padding: 10 px;
+   
     }
   
   .color--barranav {
       background-color: rgb(180, 196, 196);
       display: flex;
       flex-wrap: nowrap;
-      align-items: center;
-      justify-content: center;
+  
+      
     } 
     .contenedor_logoCarrito{
       display: flex;
@@ -27,10 +35,21 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
-        margin: 5px;
+        margin: 15px;
       }
   
       .colorCirculo{
         background-color: red;
         color: white;
+      }
+
+      
+
+      .botonnav {
+        text-decoration: none;
+        background-color: rgb(13, 13, 75);
+        padding: 10px;
+        color: white;
+        border-radius: 5%;
+        margin: 5px;
       }
