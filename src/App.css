@@ -41,39 +41,3 @@
   color: #888;
 }
 */
-.logo {
-  width: 120px;
-  border-radius: 50%;
-  padding: 10 px;
-  }
-
-.color--barranav {
-    background-color: rgb(180, 196, 196);
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-  } 
-  .contenedor_logoCarrito{
-    display: flex;
-    flex-wrap: nowrap;
-    margin-right: 10px;
-    background-color: rgb(42, 42, 249);
-    color:white;
-    }
-  .carritoSubtitulo{
-      color: white;
-      text-decoration: none;
-      margin-left: 5px;
-    }
-    .encabezado{
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: flex-end;
-      margin: 5px;
-    }
-
-    .colorCirculo{
-      background-color: red;
-      color: white;
-    }
