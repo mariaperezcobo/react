@@ -8,15 +8,14 @@ import {Header} from './components/Header/Header'
 import { ItemListContaier } from './components/ItemListContainer/ItemListContainer'
 
 
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
          <Header />
-         <ItemListContaier propiedad = {"Nueva pagina web"}/>
-       
-     
+         <ItemListContaier propiedad = {"Nueva pagina web - React Coder House"}/>
     
     </>
   )
