@@ -1,4 +1,5 @@
 import './ItemListContainer.scss'
+import {useEffect, useState} from 'react'
 
 const MOCK_DATA = [
     {nombre: 'Calzas Lisboa', precio: 15000, imagen:'./imagenes/calzas2.png', alt:'calzas estampadas', id: 'lisboa', categoria: 'calzas'},
@@ -8,25 +9,28 @@ const MOCK_DATA = [
    
 ]
 
-
+const pedirDatos = () => {
+    return new Promise ((resolve, reject) =>{
+        setTimeout (()=>{
+            resolve (MOCK_DATA)
+        },2000)
+    })
+}
 
 export const ItemListContaier = ({propiedad}) => {
+    const [productos, setProductos] = useState([])
+    console.log(productos)
 
-    const pedirDatos = () => {
-        return new Promise ((resolve, reject) =>{
-            setTimeout (()=>{
-                resolve (MOCK_DATA)
-            },2000)
-        })
-    }
-
-    pedirDatos()
+    useEffect (()=>{
+        pedirDatos()
         .then((res)=>{
-            console.log(res)
+            setProductos(res)
         })
         .catch ((error)=>{
             console.log(error)
         })
+    },[])
+ 
 
     return (
         <div className='catalogo_contenedor'>
