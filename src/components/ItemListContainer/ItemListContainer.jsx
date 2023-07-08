@@ -1,11 +1,13 @@
 import './ItemListContainer.scss'
 import {useEffect, useState} from 'react'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card'; 
 
 const MOCK_DATA = [
-    {nombre: 'Calzas Lisboa', precio: 15000, imagen:'./imagenes/calzas2.png', alt:'calzas estampadas', id: 'lisboa', categoria: 'calzas'},
-    {nombre: 'Calzas Londres', precio: 12000, imagen:'./imagenes/mujer estir.png', alt:'mujer estirando con calzas grises', id: 'londres',categoria: 'calzas'},
-    {nombre:'Calzas Madrid', precio: 10000, imagen:'./imagenes/zapas2.png', alt:'calzas estampadas blancas y azules', id: 'madrid', categoria: 'calzas'},
-    {nombre:'Top Miami', precio: 8000, imagen:'./imagenes/remera3.png', alt:'remera banca y gris',id: 'miami', categoria: 'remeras'},
+    {nombre: 'Calzas Lisboa', precio: 15000, imagen:'../../public/calzas2.png', alt:'calzas estampadas', id: 'lisboa', categoria: 'calzas'},
+    {nombre: 'Calzas Londres', precio: 12000, imagen:'../../public/mujer estir.png', alt:'mujer estirando con calzas grises', id: 'londres',categoria: 'calzas'},
+    {nombre:'Calzas Madrid', precio: 10000, imagen:'../../public/zapas2.png', alt:'calzas estampadas blancas y azules', id: 'madrid', categoria: 'calzas'},
+    {nombre:'Top Miami', precio: 8000, imagen:'../../public/remera3.png', alt:'remera banca y gris',id: 'miami', categoria: 'remeras'},
    
 ]
 
@@ -17,7 +19,7 @@ const pedirDatos = () => {
     })
 }
 
-export const ItemListContaier = ({propiedad}) => {
+export const ItemListContaier = () => {
     const [productos, setProductos] = useState([])
     console.log(productos)
 
@@ -33,8 +35,28 @@ export const ItemListContaier = ({propiedad}) => {
  
 
     return (
-        <div className='catalogo_contenedor'>
-            <p >{propiedad}</p>
+        <div className='catalogo_contenedor row contenedor justify-content-around'>
+            
+            {
+            productos.map ((producto) => (
+                <div className='col-3 margin'>
+      <Card style={{ width: '20rem' }} >
+      <Card.Img variant="top" src={producto.imagen} />
+      <Card.Body>
+        <Card.Title>{producto.nombre}</Card.Title>
+        <Card.Text>
+          ${producto.precio}
+        </Card.Text>
+        <Button variant="primary">Agregar al carrito</Button>
+      </Card.Body>
+    </Card>
+  
+            
+                   
+                </div>
+          
+            )    
+            )}
         </div>
     )
 }

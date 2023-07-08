@@ -15,7 +15,7 @@ function App() {
   return (
     <>
          <Header />
-         <ItemListContaier propiedad = {"Nueva pagina web - React Coder House"}/>
+         <ItemListContaier/>
     
     </>
   )
