@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .margin{
+    margin: 2px;
+    padding: 10px;
+      display: flex;
+      flex-wrap: nowrap;
+  }
+@media screen and (max-width: 734px) {
+    .titulo_card {
+      
+      font-size: 18px;
+        height: 45px;
+    
+    }
+    .boton_agregar{
+        font-size: 14px;
+        
+    }
+}
+
