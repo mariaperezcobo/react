@@ -1,37 +1,27 @@
 import './Header.scss'
 import reactLogo3 from '../../assets/logo2.png'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export const Header = () =>{
     return (
         <div>
-           <div className="color--barranav">
-             <nav className="navbar navbar-expand-lg colornav">
-            <div className="container-fluid">
-
-               <a className="navbar-brand" href="">
-                  <img className="logo" src={reactLogo3} alt="logo"></img>   
-               </a>
-               <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                  aria-label="Toggle navigation">
-                  <span className="navbar-toggler-icon"></span>
-               </button>
-
-               <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                  <ul className="navbar-nav">
-                     <li className="nav-item">
-                        <a className="nav-link botonnav" href="">Nosotros</a>
-                     </li>
-                     <li className="nav-item">
-                        <a className="nav-link botonnav" href="">Productos</a>
-                     </li>
-                     <li className="nav-item">
-                        <a className="nav-link botonnav" href="">Contáctanos</a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </nav>
+           <div className="color--barranav colornav">
+           <Navbar expand="lg" className="colornav">
+      <Container>
+        <Navbar.Brand href="#home"><img className="logo" src={reactLogo3} alt="logo"></img>   </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home" className='botonnav'>Inicio</Nav.Link>
+            <Nav.Link href="#link" className='botonnav'>Productos</Nav.Link>
+            <Nav.Link href="#link2" className='botonnav'>Contactanos</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
            </div>
            <div className="encabezado">
             
