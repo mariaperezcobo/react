@@ -1,11 +1,11 @@
 [
-    {"nombre": "Calzas Lisboa", "precio": 15000, "imagen":"../../public/calzas2.png", "alt":"calzas estampadas", "id": "lisboa", "categoria": "calzas"},
-    {"nombre": "Calzas Londres", "precio": 12000, "imagen":"../../public/mujer estir.png", "alt":"mujer estirando con calzas grises", "id": "londres","categoria": "calzas"},
-    {"nombre":"Calzas Madrid", "precio": 10000, "imagen":"../../public/zapas2.png", "alt":"calzas estampadas blancas y azules", "id": "madrid", "categoria": "calzas"},
-    {"nombre":"Remera Miami", "precio": 8000, "imagen":"../../public/remera3.png", "alt":"remera banca y gris", "id": "miami", "categoria": "remeras"},
-    {"nombre":"Calzas Mexico ", "precio":11000, "imagen":"../../public/calzas3.png", "alt":"mujer sentada en la playa, calzas estampadas", "id": "mexico", "categoria": "calzas"},
-    {"nombre":"Remera Buzios", "precio": 7500, "imagen":"../../public/mat(3).png", "alt":"remera rosa", "id": "buzios", "categoria": "remeras"},
-    {"nombre":"Calzas Brasil", "precio":11000, "imagen":"../../public/yoga3.png", "alt":"mujer elongando, calzas grises", "id": "brasil", "categoria": "calzas"},
-    {"nombre":"Remera Paris", "precio": 7500, "imagen":"../../public/remera1.png", "alt":"remera banca y negra", "id": "paris", "categoria": "remeras"},
-    {"nombre":"Remera Roma", "precio": 7000, "imagen":"../../public/conperro.png", "alt":"remera verde", "id": "roma", "categoria": "remeras"}
+    {"nombre": "Calzas Lisboa", "precio": 15000, "imagen":"../../public/calzas2.png", "alt":"Calzas estampadas", "id": "lisboa", "categoria": "calzas", "descripcion": "Talles: XS, S, M, L"},
+    {"nombre": "Calzas Londres", "precio": 12000, "imagen":"../../public/mujer estir.png", "alt":"Calzas grises", "id": "londres","categoria": "calzas", "descripcion": "Talles: XS, S, M, L"},
+    {"nombre":"Calzas Madrid", "precio": 10000, "imagen":"../../public/zapas2.png", "alt":"Calzas estampadas blancas y azules", "id": "madrid", "categoria": "calzas", "descripcion": "Talles: XS, S, M, L"},
+    {"nombre":"Remera Miami", "precio": 8000, "imagen":"../../public/remera3.png", "alt":"Remera banca y gris", "id": "miami", "categoria": "remeras", "descripcion": "Talles: XS, S, M, L"},
+    {"nombre":"Calzas Mexico ", "precio":11000, "imagen":"../../public/calzas3.png", "alt":"Calzas estampadas", "id": "mexico", "categoria": "calzas", "descripcion": "Talles: XS, S, M, L"},
+    {"nombre":"Remera Buzios", "precio": 7500, "imagen":"../../public/mat(3).png", "alt":"Remera rosa", "id": "buzios", "categoria": "remeras", "descripcion": "Talles: XS, S, M, L"},
+    {"nombre":"Calzas Brasil", "precio":11000, "imagen":"../../public/yoga3.png", "alt":"Calzas grises", "id": "brasil", "categoria": "calzas", "descripcion": "Talles: XS, S, M, L"},
+    {"nombre":"Remera Paris", "precio": 7500, "imagen":"../../public/remera1.png", "alt":"Remera banca y negra", "id": "paris", "categoria": "remeras", "descripcion": "Talles: XS, S, M, L"},
+    {"nombre":"Remera Roma", "precio": 7000, "imagen":"../../public/conperro.png", "alt":"Remera verde", "id": "roma", "categoria": "remeras", "descripcion": "Talles: XS, S, M, L"}
 ]

@@ -10,6 +10,8 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { Nosotros } from './components/Nosotros/Nosotros'
 import { Error } from './components/Error/Error'
 import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
+import { CarouselInicio } from './components/CarouselInicio/CarouselInicio'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +21,8 @@ function App() {
         <Header />
 
           <Routes>
-            <Route path="/" element={ <ItemListContainer/>}/>
+            <Route path="/" element={<CarouselInicio/>}/>
+            <Route path="/todos" element={ <ItemListContainer/>}/>
             <Route path="/productos/:categoryId" element={ <ItemListContainer/>}/>
             <Route path="/detail/:itemId" element={ <ItemDetailContainer/>}/>
             <Route path="/nosotros" element={ <Nosotros />}/>

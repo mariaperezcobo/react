@@ -10,10 +10,9 @@ const ItemDetail = ({item}) => {
         <Card.Title className='titulo_cardItem'>{item.nombre}</Card.Title>
            <Card.Img variant='top' src={item.imagen} />
             <Card.Body>
-               
-               <Card.Text className='botonprecio_Item'>
-                 ${item.precio}
-               </Card.Text>
+               <Card.Text className='botonprecio_Item'>${item.precio}</Card.Text>
+               <p>{item.alt}</p>
+               <p>{item.descripcion}</p>
                <Button variant="secondary">Agregar al carrito</Button>
            </Card.Body>
        </Card>
