@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card'; 
 import { pedirDatos } from '../../helpers/pedirDatos';
 import { ItemList } from '../ItemList/ItemList';
-
+import { useParams } from 'react-router-dom';
 
 
 
@@ -12,15 +12,22 @@ export const ItemListContaier = () => {
     const [productos, setProductos] = useState([])
     console.log(productos)
 
-    useEffect (()=>{
+    const {categoryId} = useParams()
+    console.log(categoryId)
+
+    useEffect (()=> {
+
         pedirDatos()
-        .then((res)=>{
-            setProductos(res)
+        .then(r => {
+           if (categoryId) {
+            setProductos (r.filter(prod => prod.categoria === categoryId))
+           } else  {
+            setProductos(r)
+           }
         })
-        .catch ((error)=>{
-            console.log(error)
-        })
-    },[])
+        .catch (error => console.log(error))
+      
+    }, [])
  
 
     return (

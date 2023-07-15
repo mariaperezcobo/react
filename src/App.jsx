@@ -8,7 +8,7 @@ import './App.css'
 import {Header} from './components/Header/Header'
 import { ItemListContaier } from './components/ItemListContainer/ItemListContainer'
 import { Nosotros } from './components/Nosotros/Nosotros'
-
+import { Error } from './components/Error/Error'
 
 
 function App() {
@@ -20,9 +20,10 @@ function App() {
 
           <Routes>
             <Route path="/" element={ <ItemListContaier/>}/>
-            <Route path="/productos" element={ <ItemListContaier/>}/>
-            <Route path="/nosotros" element={ <Nosotros />}/>
             
+            <Route path="/productos/:categoryId" element={ <ItemListContaier/>}/>
+            <Route path="/nosotros" element={ <Nosotros />}/>
+            <Route path="*" element={ <Error />}/>
           </Routes>
 
       </BrowserRouter>
