@@ -15,9 +15,13 @@ export const Header = () =>{
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className='botonnav'>Inicio</Nav.Link>
-            <Nav.Link href="#link" className='botonnav'>Productos</Nav.Link>
-            <Nav.Link href="#link2" className='botonnav'>Contactanos</Nav.Link>
+            <Nav.Link href="#home" >Inicio</Nav.Link>
+            <NavDropdown  title="Productos" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Calzas</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Remeras </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#link" >Nosotros</Nav.Link>
+            <Nav.Link href="#link2" >Contactanos</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
