@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 
 
 
-export const ItemListContaier = () => {
+export const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
     console.log(productos)
 
@@ -27,7 +27,7 @@ export const ItemListContaier = () => {
         })
         .catch (error => console.log(error))
       
-    }, [])
+    }, [categoryId])
  
 
     return (

@@ -16,12 +16,11 @@ export const Header = () =>{
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <a href="/" >Inicio</a>
-            <a href="/productos" >Productos</a>
-            <a href="/productos/calzas" >Calzas</a>
-            <a href="/productos/remeras" >Remeras</a>
-            <a href="/nosotros" >Nosotros</a>
-            
+            <Link to="/" >Inicio</Link>
+            <Link to="/productos/calzas" >Calzas</Link>
+            <Link to="/productos/remeras" >Remeras</Link>
+            <Link to="/nosotros" >Nosotros</Link>
+            <Link to="/contacto" >Contacto</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

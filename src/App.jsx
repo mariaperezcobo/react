@@ -6,10 +6,10 @@ import viteLogo from '/vite.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import {Header} from './components/Header/Header'
-import { ItemListContaier } from './components/ItemListContainer/ItemListContainer'
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { Nosotros } from './components/Nosotros/Nosotros'
 import { Error } from './components/Error/Error'
-
+import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,9 +19,9 @@ function App() {
         <Header />
 
           <Routes>
-            <Route path="/" element={ <ItemListContaier/>}/>
-            
-            <Route path="/productos/:categoryId" element={ <ItemListContaier/>}/>
+            <Route path="/" element={ <ItemListContainer/>}/>
+            <Route path="/productos/:categoryId" element={ <ItemListContainer/>}/>
+            <Route path="/detail/:itemId" element={ <ItemDetailContainer/>}/>
             <Route path="/nosotros" element={ <Nosotros />}/>
             <Route path="*" element={ <Error />}/>
           </Routes>
