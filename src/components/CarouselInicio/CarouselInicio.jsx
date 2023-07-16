@@ -3,7 +3,11 @@ import './CarouselInicio.scss'
 
 export const CarouselInicio = () =>{
     return (
-        <div className='contenedor_Carousel'>
+        <div >
+          <div className='contenedorTitulo'>
+            <h1 className='tituloPrincipal'>Fitness Ropa Deportiva</h1>
+          </div>
+          <div className='contenedor_Carousel'>
             <div className='contenedor_Carousel2'>
                 <Carousel >
                   <Carousel.Item>
@@ -30,8 +34,9 @@ export const CarouselInicio = () =>{
                   </Carousel.Item>
                 </Carousel>
             </div>
-            
+          </div>
         </div>
+
     )
 
 }
