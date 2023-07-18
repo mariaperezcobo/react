@@ -1,7 +1,5 @@
 import './ItemListContainer.scss'
 import {useEffect, useState} from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card'; 
 import { pedirDatos } from '../../helpers/pedirDatos';
 import { ItemList } from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
