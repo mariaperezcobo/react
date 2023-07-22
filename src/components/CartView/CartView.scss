@@ -1,0 +1,39 @@
+.contenedorTitulo{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(172, 171, 171);
+    height: 100px;
+    margin-bottom: 25px;
+}
+
+  .tituloPrincipal{
+    align-items: center;
+    
+  }
+
+  .contenedorCarrito{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .titulo_card{
+    margin-bottom: 20px;
+  }
+  .total_Producto{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    
+  }
+  .contenedorPrecioFinal{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }

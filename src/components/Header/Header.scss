@@ -16,34 +16,47 @@
       background-color: rgb(180, 196, 196);
       display: flex;
       flex-wrap: nowrap;
-  
+    margin-bottom: 15px;
       
     } 
+    .colornav{
+      
+      width: 90%;
+    }
     .contenedor_logoCarrito{
       display: flex;
       flex-wrap: nowrap;
       margin-right: 10px;
       background-color: rgb(42, 42, 249);
-      color:white;
+      color:rgb(91, 91, 91);
+      
       }
-    .carritoSubtitulo{
-        color: white;
-        text-decoration: none;
-        margin-left: 5px;
-      }
-      .encabezado{
+    // .carritoSubtitulo{
+    //     color: white;
+    //     text-decoration: none;
+    //     margin-left: 5px;
+    //   }
+    //   .encabezado{
+    //     display: flex;
+    //     flex-wrap: nowrap;
+    //     justify-content: flex-end;
+    //     margin: 15px;
+    //   }
+  
+      // .colorCirculo{
+      //   background-color: red;
+      //   color: white;
+      // }
+
+      .cartWidget{
+        justify-content: flex-end;
+       background-color: red;
+        align-items: center;
+        justify-content: center;
         display: flex;
         flex-wrap: nowrap;
-        justify-content: flex-end;
-        margin: 15px;
+        width: 10%;
       }
-  
-      .colorCirculo{
-        background-color: red;
-        color: white;
-      }
-
-      
 
       .botonnav {
         text-decoration: none;

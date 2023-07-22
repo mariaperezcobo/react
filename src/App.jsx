@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
@@ -8,42 +8,35 @@ import { Nosotros } from './components/Nosotros/Nosotros'
 import { Error } from './components/Error/Error'
 import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
 import { CarouselInicio } from './components/CarouselInicio/CarouselInicio'
-import { CartContext } from './context/CartContext'
+import { CartProvider } from "./context/CartContext";
+import { CartView } from "./components/CartView/CartView";
+
 
 function App() {
  
-  const [cart, setCart] = useState([])
-  console.log(cart)
-
-  const agregarAlCarrito = (item) =>{
-    setCart ([...cart, item])
-  }
-
-  const isInCart = (id) =>{
-    return cart.some((item) => item.id === id)
-  }
 
   return (
-<CartContext.Provider value={{
-  cart,
-  agregarAlCarrito,
-  isInCart
-}}>
-    <BrowserRouter>
-       <Header />
 
-       <Routes>
-          <Route path="/" element={<CarouselInicio/>}/>
-          <Route path="/todos" element={ <ItemListContainer/>}/>
-          <Route path="/productos/:categoryId" element={ <ItemListContainer/>}/>
-          <Route path="/detail/:itemId" element={ <ItemDetailContainer/>}/>
-          <Route path="/nosotros" element={ <Nosotros />}/>
-          <Route path="*" element={ <Error />}/>
-        </Routes>
+    <CartProvider>
 
-    </BrowserRouter>
+        <BrowserRouter>
+              <Header />
 
-</CartContext.Provider>
+              <Routes>
+                  <Route path="/" element={<CarouselInicio/>}/>
+                  <Route path="/todos" element={ <ItemListContainer/>}/>
+                  <Route path="/productos/:categoryId" element={ <ItemListContainer/>}/>
+                  <Route path="/detail/:itemId" element={ <ItemDetailContainer/>}/>
+                  <Route path="/nosotros" element={ <Nosotros />}/>
+                  <Route path="/cart" element={ <CartView />}/>
+                  <Route path="*" element={ <Error />}/>
+                </Routes>
+
+            </BrowserRouter>
+    </CartProvider>
+   
+
+
   )
 }
 

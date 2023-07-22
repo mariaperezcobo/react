@@ -35,7 +35,7 @@ const ItemDetail = ({item}) => {
                 
                 {
                     isInCart (item.id)
-                    ? <Link to="/cart" className="btn btn-secondary">Terminar mi compra</Link>
+                    ? <Link to="/cart" className="btn btn-secondary">Ir al carrito</Link>
                     :   
                     <ItemCount 
                         max={item.stock}
