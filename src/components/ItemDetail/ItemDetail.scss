@@ -8,7 +8,6 @@
     justify-content: center;
     display: flex;
     margin: 20px 20px 40px 20px;
-    
   }
 
   .titulo_cardItem{
@@ -17,5 +16,9 @@
 
   .botonprecio_Item{
     font-size: 28px;
-    
+  }
+
+  .color_botonAgregar{
+    background-color:rgb(180, 196, 196);
+    border-color: grey ;
   }

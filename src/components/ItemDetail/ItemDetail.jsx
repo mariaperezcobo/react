@@ -1,25 +1,31 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card'; 
 import './ItemDetail.scss'
+import {ItemCount} from "../ItemCount/ItemCount"
+
 
 const ItemDetail = ({item}) => {
     return (
-        <div className='containerItem'>
-             
-        <Card style={{ width: '30rem' }} >
-        <Card.Title className='titulo_cardItem'>{item.nombre}</Card.Title>
-           <Card.Img variant='top' src={item.imagen} />
-            <Card.Body>
-               <Card.Text className='botonprecio_Item'>${item.precio}</Card.Text>
-               <p>{item.alt}</p>
-               <p>{item.descripcion}</p>
-               <Button variant="secondary">Agregar al carrito</Button>
-           </Card.Body>
-       </Card>
 
+        <div className='containerItem'>
+            <Card style={{ width: '30rem' }} >
+                <Card.Title className='titulo_cardItem'>{item.nombre}</Card.Title>
+                <Card.Img variant='top' src={item.imagen} />
+                <Card.Body>
+                <Card.Text className='botonprecio_Item'>${item.precio}</Card.Text>
+                <p>{item.alt}</p>
+                <p>{item.descripcion}</p>
+                <ItemCount />
+
+                <Button className="color_botonAgregar" variant="info">Agregar al carrito</Button>
+                </Card.Body>
+                
+                
+            </Card>
+            
+            
         </div>
     )
-    
 }
 
 export default ItemDetail
