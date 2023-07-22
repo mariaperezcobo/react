@@ -10,8 +10,8 @@ export const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const {itemId} = useParams()
-    console.log(itemId)
-    console.log(item)
+    // console.log(itemId)
+    // console.log(item)
 
     useEffect(() => {
         setLoading(true)
@@ -26,17 +26,12 @@ export const ItemDetailContainer = () => {
 
     return (
         <div >
-            
             {
                 loading 
                 ? <p className="cargando">Cargando..</p>
                 : <ItemDetail item={item}/>
             }
-            
-          
         </div>
     )
-
-
 }
-    
+

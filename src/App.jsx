@@ -8,26 +8,42 @@ import { Nosotros } from './components/Nosotros/Nosotros'
 import { Error } from './components/Error/Error'
 import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
 import { CarouselInicio } from './components/CarouselInicio/CarouselInicio'
-
+import { CartContext } from './context/CartContext'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
+  const [cart, setCart] = useState([])
+  console.log(cart)
+
+  const agregarAlCarrito = (item) =>{
+    setCart ([...cart, item])
+  }
+
+  const isInCart = (id) =>{
+    return cart.some((item) => item.id === id)
+  }
 
   return (
-      <BrowserRouter>
-        <Header />
+<CartContext.Provider value={{
+  cart,
+  agregarAlCarrito,
+  isInCart
+}}>
+    <BrowserRouter>
+       <Header />
 
-          <Routes>
-            <Route path="/" element={<CarouselInicio/>}/>
-            <Route path="/todos" element={ <ItemListContainer/>}/>
-            <Route path="/productos/:categoryId" element={ <ItemListContainer/>}/>
-            <Route path="/detail/:itemId" element={ <ItemDetailContainer/>}/>
-            <Route path="/nosotros" element={ <Nosotros />}/>
-            <Route path="*" element={ <Error />}/>
-          </Routes>
+       <Routes>
+          <Route path="/" element={<CarouselInicio/>}/>
+          <Route path="/todos" element={ <ItemListContainer/>}/>
+          <Route path="/productos/:categoryId" element={ <ItemListContainer/>}/>
+          <Route path="/detail/:itemId" element={ <ItemDetailContainer/>}/>
+          <Route path="/nosotros" element={ <Nosotros />}/>
+          <Route path="*" element={ <Error />}/>
+        </Routes>
 
-      </BrowserRouter>
+    </BrowserRouter>
 
+</CartContext.Provider>
   )
 }
 
