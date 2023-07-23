@@ -1,10 +1,8 @@
 .logoCarrito{
     width: 90%;
-    background-color: green;
-    
-}
-.logoCarrito2{
-    
-    background-color: blue;
-    width: 120px;
+    color: rgb(67, 65, 65);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
 }
