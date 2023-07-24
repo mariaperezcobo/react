@@ -1,0 +1,59 @@
+.contenedorTitulo{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(172, 171, 171);
+    height: 100px;
+    margin-bottom: 25px;
+}
+
+  .tituloPrincipal{
+    align-items: center;
+    
+  }
+
+
+  .contenedor_Nosotros{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .contenedorFotoyTexto{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    background-color: rgb(180, 196, 196);
+  }
+
+  .contenedorTexto{
+   
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 30px;
+    
+  }
+  .contenedorFoto{
+    
+     align-items: center;
+     justify-content: center;
+     width: 60%;
+     display: flex;
+     flex-wrap: nowrap;
+     padding: 20px;
+     
+   }
+
+   .imagen{
+    width: 80%;
+    padding: 10px;
+    border-radius: 8%;
+
+   }
