@@ -26,12 +26,20 @@ export const ItemListContainer = () => {
         .catch (error => console.log(error))
       
     }, [categoryId])
- 
 
     return (
+        <div className='contenedor'>
+            <div className='contenedorTitulo'>
+                 <h1 className='tituloPrincipal'>
+                 {categoryId ? categoryId.toUpperCase() : "Todos los productos"}
+            </h1> 
+            </div>
         <div className='contenedorProductos'>
             <ItemList productos={productos}/>
-          
         </div>
+        </div>
+        
+      
+       
     )
 }
