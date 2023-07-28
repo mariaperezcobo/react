@@ -4,7 +4,7 @@ import {useEffect, useState} from 'react'
 import { ItemList } from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import { Loader } from '../Loader/Loader';
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../../firebase/config'
 
 export const ItemListContainer = () => {
@@ -21,8 +21,11 @@ export const ItemListContainer = () => {
 
         //armar la referencia (sync)
         const productosRef = collection(db, "productos")
+        const q = categoryId
+                    ? query(productosRef, where('categoria', '==', categoryId))
+                    : productosRef
         //llamar a esa ref (async)
-        getDocs(productosRef)
+        getDocs(q)
             .then((resp)=>{
                 const docs = resp.docs.map((doc) => {
                     return{
