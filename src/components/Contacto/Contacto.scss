@@ -1,0 +1,49 @@
+
+
+
+.contenedor_contacto{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .contenedorContactoFotoyTexto{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    background-color: rgb(180, 196, 196);
+  }
+
+  .contenedorContactoTexto{
+   
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    padding: 30px;
+    
+  }
+  .contenedorContactoFoto{
+    
+     align-items: center;
+     justify-content: center;
+     width: 30%;
+     display: flex;
+     flex-wrap: nowrap;
+     padding: 20px;
+     
+   }
+   .imagenContacto{
+    width: 80%;
+    padding: 10px;
+    border-radius: 8%;
+
+   }
+//   .marginContacto{
+//     background-color: blue;
+   
+//   }

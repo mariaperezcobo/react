@@ -1,7 +1,7 @@
 [
     {"nombre": "Calzas Lisboa", "precio": 20000, "imagen":"/calzas2.png", "alt":"Calzas estampadas", "id": "lisboa", "categoria": "calzas", "descripcion": "Talles: XS, S, M, L", "stock": 19},
     {"nombre": "Calzas Londres", "precio": 18000, "imagen":"/mujer estir.png", "alt":"Calzas grises", "id": "londres","categoria": "calzas", "descripcion": "Talles: XS, S, M, L", "stock": 23},
-    {"nombre":"Calzas Madrid", "precio": 22000, "imagen":"/zapas2.png", "alt":"Calzas estampadas blancas y azules", "id": "madrid", "categoria": "calzas", "descripcion": "Talles: XS, S, M, L", "stock": 23},
+    {"nombre":"Calzas Madrid", "precio": 22000, "imagen":"/zapas2.png", "alt":"Calzas estampadas blancas y azules", "id": "madrid", "categoria": "calzas", "descripcion": "Talles: XS, S, M, L", "stock": 9},
     {"nombre":"Remera Miami", "precio": 12000, "imagen":"/remera3.png", "alt":"Remera banca y gris", "id": "miami", "categoria": "remeras", "descripcion": "Talles: XS, S, M, L", "stock": 9},
     {"nombre":"Calzas Mexico ", "precio":17000, "imagen":"/calzas3.png", "alt":"Calzas estampadas", "id": "mexico", "categoria": "calzas", "descripcion": "Talles: XS, S, M, L", "stock": 10},
     {"nombre":"Remera Buzios", "precio": 9000, "imagen":"/mat(3).png", "alt":"Remera rosa", "id": "buzios", "categoria": "remeras", "descripcion": "Talles: XS, S, M, L", "stock": 17},

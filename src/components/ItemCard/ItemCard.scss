@@ -3,41 +3,47 @@
     margin: 0;
     box-sizing: border-box;
   }
-
   .margin{
     margin: 2px;
     padding: 10px;
-      display: flex;
-      flex-wrap: nowrap;
-
- 
-
+    display: flex;
+    flex-wrap: nowrap;
   }
+
+  .ultimas{
+    margin-top: 7px;
+    font-size: 12px;
+    color: rgb(196, 23, 23);
+  }  
+  .botonprecio{
+    
+    height: 40px;
+  }
+
 @media screen and (max-width: 734px) {
     .titulo_card {
-      
       font-size: 18px;
-        height: 45px;
-    
+      height: 45px;
     }
     .boton_agregar{
-        font-size: 14px;
-        
+      font-size: 14px;   
     }
     .botonprecio{
       font-size: 16px;
     }
+    .ultimas{
+      
+      font-size: 10px;
+      
+    }  
 }
 @media screen and (max-width: 500px) {
   .titulo_card {
-    
     font-size: 16px;
-      height: 45px;
-  
+    height: 45px;
   }
   .boton_agregar{
       font-size: 12px;
-      
   }
   .botonprecio{
     font-size: 12px;
@@ -46,13 +52,10 @@
 
 @media screen and (max-width: 460px) {
   .titulo_card {
-    
     font-size: 14px;
-      height: 45px;
-  
+    height: 45px;
   }
   .boton_agregar{
-      font-size: 10px;
-      
+    font-size: 10px; 
   }
 }
