@@ -30,8 +30,14 @@ const ItemDetail = ({item}) => {
                 <Card.Img variant='top' src={item.imagen} />
                 <Card.Body>
                 <Card.Text className='botonprecio_Item'>${item.precio}</Card.Text>
-                <p>{item.alt}</p>
-                <p>{item.descripcion}</p>
+                
+                <div className='marginDetail'>
+                {item.alt}
+                    </div>
+                <div className='marginDetail'>
+                {item.descripcion}
+                </div>
+            
                 
                 {
                     isInCart (item.id)

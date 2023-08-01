@@ -12,8 +12,11 @@ export const ItemCard = ({item}) => {
                     <Card.Title className='titulo_card'>{item.nombre}</Card.Title>
                     <Card.Text className='botonprecio'>
                         ${item.precio}
-                        {item.stock < 10 ? <p className='ultimas'> Últimas unidades!</p> : null}
+                        
                     </Card.Text>
+                   <div className='espacioUltimas'>
+                   {item.stock < 10 && <div className='ultimas'> Últimas unidades!</div>}
+                    </div> 
                     <Link to={`/detail/${item.id}`} className='boton_agregar' variant='secondary' >Ver</Link>
                 </Card.Body>
             </Card>

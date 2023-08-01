@@ -13,16 +13,14 @@ export const CartView = () =>{
     if (cart.length === 0){
         return(
             <div>
-        <EmptyCart />
-        
+                <EmptyCart />
             </div>
-            
         )
     }
 
 
     return (
-        <div>
+        <div >
     
              <div className='contenedorTitulo'>
                  <h1 className='tituloPrincipal'>Carrito de Compras</h1>
@@ -50,11 +48,15 @@ export const CartView = () =>{
             }
             </div>
             <div className='contenedorPrecioFinal'>
-                <Link to='/todos' className='total_Producto btn btn-outline-secondary' variant='outline-secondary' >Seguir comprando</Link>   
-                <Button onClick={vaciarCarrito} className='total_Producto' variant='outline-secondary' >Vaciar Carrito</Button>   
+                <p className='total_Producto2 btn btn-secondary' variant='secondary' size="lg" >El precio total de la compra es: ${totalCompra()}</p> 
             </div> 
             <div className='contenedorPrecioFinal'>
-                <Button className='total_Producto' variant='secondary' >El precio total de la compra es: ${totalCompra()}</Button> 
+                <Link to='/todos' className='total_Producto2 btn btn-outline-secondary' variant='outline-secondary' >Seguir comprando</Link>   
+                <Button onClick={vaciarCarrito} className='total_Producto2' variant='outline-secondary' >Vaciar Carrito</Button>   
+            </div> 
+            <div className='contenedorPrecioFinal'>
+                <Link to='/checkout' className='terminarCompra btn btn-info' variant='info' >Terminar mi compra</Link>   
+                   
             </div> 
             
         </div>
