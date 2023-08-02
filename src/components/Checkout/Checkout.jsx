@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row';
 import './Checkout.scss'
 import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
+import { db } from '../../firebase/config'
+import { collection, addDoc } from 'firebase/firestore';
 
 export const Checkout = () => {
   const {cart, totalCompra} = useContext(CartContext)
@@ -26,16 +28,29 @@ export const Checkout = () => {
  
   const handleSubmit = (e) =>{
       e.preventDefault()
+
+      //validaciones
+      //if (validaciones)
+      //if si no tengo items
       console.log("submit")
       console.log(values)
 
       const orden = {
         cliente: values,
-        items: cart,
+        items: cart.map(item => ({id: item.id,precio: item.precio, cantidad: item.cantidad, nombre: item.nombre }) ),
         total: totalCompra(),
-        fyh: new Date
+        fyh: new Date()
       } 
       console.log(orden)
+
+ //to send to firebase
+ const ordersRef = collection (db, "orders")
+
+ addDoc(ordersRef, orden)
+     .then((doc)=>{
+       console.log(doc.id)
+     })
+
     }
 
 

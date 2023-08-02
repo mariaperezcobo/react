@@ -29,7 +29,7 @@ export const CartView = () =>{
              <div className='contenedorCarrito'>
             {
                 cart.map((item)=>(
-                    <div  className='col-3 margin'>
+                    <div  className='col-3 margin' key={item.id}>
                         <Card style={{ width: '20rem' }} >
                             <Card.Img variant='top' src={item.imagen} />
                             <Card.Body>
