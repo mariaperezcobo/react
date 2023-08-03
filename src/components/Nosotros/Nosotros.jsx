@@ -1,16 +1,12 @@
+import { Title } from '../Title/Title'
 import './Nosotros.scss'
 
 
 export const Nosotros = () =>{
     return (
         <div >
-             <div className='contenedorTitulo'>
-                <h1 className='tituloPrincipal'>Acerca de Nosotros</h1>
-            </div>
-           
-          
-           
-
+            <Title>Acerca de nosotros</Title>   
+              
                  <div className='contenedor_Nosotros'>
             
 

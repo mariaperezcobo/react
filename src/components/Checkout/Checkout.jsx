@@ -7,6 +7,8 @@ import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { db } from '../../firebase/config'
 import { collection, addDoc, updateDoc, getDoc, doc } from 'firebase/firestore'
+import { Order } from '../Order/Order';
+import { Title } from '../Title/Title'
 
 import { Formik, Form, Field, ErrorMessage} from "formik"
 import * as Yup from 'yup'
@@ -87,8 +89,8 @@ export const Checkout = () => {
     if (orderId) {
       return (
         <div>
-          <h2>tu compra se realizó exitosamente</h2>
-          <p>El numero de orden es: {orderId}</p>
+         
+          <Order>{orderId}</Order>
         </div>
       )
     }
@@ -101,10 +103,8 @@ export const Checkout = () => {
 
     return (
       <div>
-        <div className='contenedorTitulo'>
-          <h1 className='tituloPrincipal'>Checkout</h1>
-        </div>
-
+        <Title>Checkout</Title>
+       
         <div className='contenedor_contacto'>
             
           <div className='contenedorContactoFotoyTexto'>

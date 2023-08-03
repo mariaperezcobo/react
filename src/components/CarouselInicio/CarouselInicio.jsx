@@ -1,12 +1,13 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './CarouselInicio.scss'
+import { Title } from '../Title/Title';
 
 export const CarouselInicio = () =>{
     return (
         <div >
-          <div className='contenedorTitulo'>
-            <h1 className='tituloPrincipal'>Fitness Ropa Deportiva</h1>
-          </div>
+
+          <Title>Fitness Ropa Deportiva</Title>
+          
           <div className='contenedor_Carousel'>
             <div className='contenedor_Carousel2'>
                 <Carousel >

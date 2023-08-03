@@ -24,7 +24,7 @@ export const Header = () =>{
                       <Link to="/productos/calzas" className="menu_desplegable">Calzas</Link>
                       <Link to="/productos/remeras" className="menu_desplegable">Remeras</Link>
                       <Link to="/nosotros" className="menu_desplegable">Nosotros</Link>
-                      <Link to="/checkout" className="menu_desplegable">Contacto</Link>
+                      
                     </Nav>
                   </Navbar.Collapse>
                 </Container>

@@ -3,13 +3,18 @@
     margin: 0;
     box-sizing: border-box;
   }
-
+  .irAlCarrito{
+    background-color: rgb(116, 177, 220);
+  }
   .containerItem{
     justify-content: center;
     display: flex;
     margin: 20px 20px 40px 20px;
   }
-
+  .formato{
+    justify-content: center;
+    display: flex;
+  }
   .titulo_cardItem{
     margin: 20px;
   }

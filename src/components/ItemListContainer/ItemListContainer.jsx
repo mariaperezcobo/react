@@ -6,15 +6,13 @@ import { useParams } from 'react-router-dom';
 import { Loader } from '../Loader/Loader';
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../../firebase/config'
+import { Title } from '../Title/Title';
 
 export const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
-    console.log(productos)
-
     const {categoryId} = useParams()
-    console.log(categoryId)
 
     useEffect (()=> {
         setLoading(true)
@@ -34,7 +32,7 @@ export const ItemListContainer = () => {
                     }
                 })
                 setProductos(docs)
-                console.log(docs)
+                
             })
             .catch(e => console.log(e))
             .finally(() => setLoading(false) )
@@ -60,11 +58,9 @@ export const ItemListContainer = () => {
                 loading
                 ? <Loader />
                 :    <div className='contenedor'>
-                        <div className='contenedorTitulo'>
-                            <h1 className='tituloPrincipal'>
-                            {categoryId ? categoryId.toUpperCase() : "Todos los productos"}
-                            </h1> 
-                        </div>
+                        <Title>{categoryId ? categoryId.toUpperCase() : "Todos los productos"}</Title>  
+                        
+                       
                         <div className='contenedorProductos'>
                             <ItemList productos={productos}/>
                         </div>
