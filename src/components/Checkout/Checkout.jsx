@@ -1,40 +1,36 @@
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import './Checkout.scss'
 import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { db } from '../../firebase/config'
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, updateDoc, getDoc, doc } from 'firebase/firestore';
+import { Formik, Form, Field} from "formik"
 
 export const Checkout = () => {
-  const {cart, totalCompra} = useContext(CartContext)
+  const {cart, totalCompra, vaciarCarrito} = useContext(CartContext)
 
-   const [values, setValues] = useState({
-        nombre:'',
-        apellido:'',
-        email:''
-   })   
+  const [orderId, setOrderId] = useState(null)
+  //  const [values, setValues] = useState({
+  //       nombre:'',
+  //       apellido:'',
+  //       email:''
+  //  })   
 
  
-  const handleInputChange = (e) =>{
+  // const handleInputChange = (e) =>{
     
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value
-    })
-  }
+  //   setValues({
+  //     ...values,
+  //     [e.target.name]: e.target.value
+  //   })
+  // }
  
-  const handleSubmit = (e) =>{
-      e.preventDefault()
-
-      //validaciones
-      //if (validaciones)
-      //if si no tengo items
-      console.log("submit")
-      console.log(values)
-
+  const handleSubmit =  (values) =>{
+      
+      //to create the order
       const orden = {
         cliente: values,
         items: cart.map(item => ({id: item.id,precio: item.precio, cantidad: item.cantidad, nombre: item.nombre }) ),
@@ -43,16 +39,49 @@ export const Checkout = () => {
       } 
       console.log(orden)
 
+//to actualize the document
+      
+      // orden.items.forEach(item =>{
+      //   const docRef = doc(db, "productos", item.id)
+      //   getDoc(docRef)
+      //     .then((doc)=>{
+      //         const stock = doc.data().stock
+      //         if (stock>= item.cantidad){
+
+      //         }
+      //         updateDoc(docRef,{
+      //           stock: stock - item.cantidad
+      //         })
+      //     })
+        
+      // })
+
  //to send to firebase
  const ordersRef = collection (db, "orders")
 
  addDoc(ordersRef, orden)
      .then((doc)=>{
        console.log(doc.id)
+       vaciarCarrito()
+      setOrderId(doc.id)
      })
 
     }
 
+    if (orderId) {
+      return (
+        <div>
+          <h2>tu compra se realizó exitosamente</h2>
+          <p>El numero de orden es: {orderId}</p>
+        </div>
+      )
+    }
+
+    if (cart.lenght === 0) {
+      return(
+        <Navigate to="/"></Navigate>
+      )
+    }
 
     return (
       <div>
@@ -65,7 +94,27 @@ export const Checkout = () => {
           <div className='contenedorContactoFotoyTexto'>
             <div className='contenedorContactoTexto'>
               
-              <form onSubmit={handleSubmit}>
+              <Formik
+                initialValues={{
+                   nombre: "",
+                   apellido: "",
+                   email: "" 
+                }}
+                onSubmit={
+                    handleSubmit}>
+
+                  {()=>(
+                    <Form>
+                        <Field className="form-control my-2" placeholder= "nombre" type="text" name="nombre" />
+                        <Field className="form-control my-2" placeholder= "apellido" type="text" name="apellido" />
+                        <Field className="form-control my-2" placeholder= "email" type="email" name="email" />
+                        <Button type="submit">Enviar</Button>
+                    </Form>
+                  )}
+              </Formik>
+
+
+              {/* <form onSubmit={handleSubmit}>
                 <Row>
                   <Form.Label column lg={2}>
                     Nombre
@@ -117,7 +166,7 @@ export const Checkout = () => {
                     </Col>
                 </Form.Group>
 
-              </form>
+              </form> */}
               
   
                 </div>
