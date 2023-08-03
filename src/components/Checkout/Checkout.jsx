@@ -1,13 +1,29 @@
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
+// import Col from 'react-bootstrap/Col';
 // import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
+// import Row from 'react-bootstrap/Row';
 import './Checkout.scss'
 import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { db } from '../../firebase/config'
-import { collection, addDoc, updateDoc, getDoc, doc } from 'firebase/firestore';
-import { Formik, Form, Field} from "formik"
+import { collection, addDoc, updateDoc, getDoc, doc } from 'firebase/firestore'
+
+import { Formik, Form, Field, ErrorMessage} from "formik"
+import * as Yup from 'yup'
+
+const schema = Yup.object().shape({
+  nombre: Yup.string()
+          .min(3,'El nombre es demasiado corto')
+          .max(20,'Ingresar menos de 20 caracteres')
+          .required('Este campo es obligatorio'),
+  apellido: Yup.string()
+          .min(3,'El nombre es demasiado corto')
+          .max(20,'Ingresar menos de 20 caracteres')
+          .required('Este campo es obligatorio'),
+  email: Yup.string()
+          .email('El email es inválido')
+          .required('Este campo es obligatorio'),
+})
 
 export const Checkout = () => {
   const {cart, totalCompra, vaciarCarrito} = useContext(CartContext)
@@ -100,14 +116,18 @@ export const Checkout = () => {
                    apellido: "",
                    email: "" 
                 }}
-                onSubmit={
-                    handleSubmit}>
+                onSubmit={handleSubmit}
+                validationSchema={schema}
+                >
 
                   {()=>(
                     <Form>
                         <Field className="form-control my-2" placeholder= "nombre" type="text" name="nombre" />
+                        <ErrorMessage name="nombre" component="p" />
                         <Field className="form-control my-2" placeholder= "apellido" type="text" name="apellido" />
+                        <ErrorMessage name="apellido" component="p"/>
                         <Field className="form-control my-2" placeholder= "email" type="email" name="email" />
+                        <ErrorMessage name="email" component="p"/>
                         <Button type="submit">Enviar</Button>
                     </Form>
                   )}
