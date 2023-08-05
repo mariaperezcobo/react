@@ -16,7 +16,7 @@
       background-color: rgb(180, 196, 196);
       display: flex;
       flex-wrap: nowrap;
-    margin-bottom: 15px;
+      margin-bottom: 15px;
       
     } 
     .colornav{
@@ -27,30 +27,6 @@
       flex-wrap: nowrap;
       padding-left: 20px;;
     }
-    // .contenedor_logoCarrito{
-    //   display: flex;
-    //   flex-wrap: nowrap;
-    //   margin-right: 10px;
-    //   background-color: rgb(42, 42, 249);
-    //   color:rgb(91, 91, 91);
-      
-    //   }
-    // .carritoSubtitulo{
-    //     color: white;
-    //     text-decoration: none;
-    //     margin-left: 5px;
-    //   }
-    //   .encabezado{
-    //     display: flex;
-    //     flex-wrap: nowrap;
-    //     justify-content: flex-end;
-    //     margin: 15px;
-    //   }
-  
-      // .colorCirculo{
-      //   background-color: red;
-      //   color: white;
-      // }
 
       .cartWidget{
         justify-content: flex-end;
@@ -62,16 +38,7 @@
         width: 20%;
       }
 
-      // .botonnav {
-      //   text-decoration: none;
-      //   background-color: rgb(13, 13, 75);
-      //   padding: 10px;
-      //   color: white;
-      //   border-radius: 5%;
-      //   margin: 5px;
-      // }
-
-      .menu_desplegable{
+       .menu_desplegable{
         text-decoration: none;
         background-color: rgb(13, 13, 75);
         padding: 10px;

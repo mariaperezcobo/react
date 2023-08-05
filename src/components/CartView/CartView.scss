@@ -1,70 +1,41 @@
-.contenedorTitulo{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(172, 171, 171);
-    height: 100px;
-    margin-bottom: 25px;
-    width: 100%;
+.contenedorPrecioFinal{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.totalCompra{
+  background-color: rgb(180, 196, 196);
+  width: 70%;
+  font-size: 36px;
+  margin: 20px;
 }
 
-  .tituloPrincipal{
-    align-items: center;
-    
-  }
 
   .contenedorCarrito{
     display: flex;
-    flex-wrap: nowrap;
+ 
     align-items: center;
     justify-content: center;
   }
-  .titulo_card{
+  .titulo_card2{
     margin-bottom: 20px;
   }
-  .total_Producto{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-   
-    margin: 10px;
-    
-  }  
+ 
   .total_Producto2{
-   
     margin: 10px;
     
   }
-  .totalCompra{
-    background-color: rgb(180, 196, 196);
-    width: 70%;
-    font-size: 36px;
-    margin: 20px;
-  }
+
   .terminarCompra{
     background-color: gray;
     margin: 10px;
     font-size: 20px;
     
   }
-  .contenedorPrecioFinal{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-  
-   
-  }
-  // .contenedor{
-  //   display: flex;
-  //   flex-wrap: nowrap;
-  //   align-items: center;
-  //   justify-content: center;
-   
-  // }
+
+
   .contenedorPrecioFinal2{
     display: flex;
     flex-wrap: nowrap;
@@ -72,7 +43,4 @@
     justify-content: center;
     margin: 10px;
     
-  }
-  .prueba{
-    background-color: blue;
   }

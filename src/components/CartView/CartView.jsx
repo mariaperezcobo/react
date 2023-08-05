@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/esm/Button';
 import { Link } from 'react-router-dom';
 import {AiOutlineDelete} from 'react-icons/ai';
 import { EmptyCart } from '../EmptyCart/EmptyCart';
+import { Title } from '../Title/Title';
 
 export const CartView = () =>{
     const {cart, totalCompra, vaciarCarrito, eliminarProducto} = useContext(CartContext)
@@ -21,19 +22,16 @@ export const CartView = () =>{
 
     return (
         <div >
-    
-             <div className='contenedorTitulo'>
-                 <h1 className='tituloPrincipal'>Carrito de Compras</h1>
-            </div>
-      
-             <div className='contenedorCarrito'>
+            <Title>Carrito de Compras</Title>
+                 
+             <div className='contenedorCarrito row '>
             {
                 cart.map((item)=>(
                     <div  className='col-3 margin' key={item.id}>
                         <Card style={{ width: '20rem' }} >
                             <Card.Img variant='top' src={item.imagen} />
                             <Card.Body>
-                                <Card.Title className='titulo_card'>{item.nombre}</Card.Title>
+                                <Card.Title className='titulo_card2'>{item.nombre}</Card.Title>
                                 <Card.Text >
                                 Precio por unidad: ${item.precio}
                                 </Card.Text>

@@ -1,11 +1,46 @@
 
 
 .total_Producto{
-    
+    font-size: 28px;
     margin: 40px;
-    width: 10%;
-  }
+}
 
  .carritoVacio{
     margin: 50px 10px 10px 40px;
+    font-size: 36px;
  } 
+
+ .contenedor_emptyCard{
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content: center;
+ }
+
+
+ .contenedorEmptyCard2{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   width: 80%;
+   background-color: rgb(180, 196, 196);
+   margin: 40px;
+ }
+
+ .contenedor_1{
+   display: flex;
+  
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   ;
+ }
+ .contenedor_2{
+   display: flex;
+  
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   
+ }

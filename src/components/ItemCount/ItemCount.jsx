@@ -4,16 +4,13 @@ import './ItemCount.scss'
 
 export const ItemCount = ({max, counter, setCounter, agregar}) => {
 
-
 const handleRestar = () =>{
     counter > 1 && setCounter (counter -1)
-
 }
 
 const handleSumar = () => {
     counter < max && setCounter (counter + 1 )
 }
-
 
 
 return (
@@ -27,7 +24,5 @@ return (
             <Button onClick={agregar} className="color_botonAgregar" variant="info">Agregar al carrito</Button>
         </div>
     </div>
-    
 )
-   
 }
