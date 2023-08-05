@@ -15,7 +15,7 @@ export const Header = () =>{
               <div className="colornav">
               <Navbar expand="lg" >
                 <Container>
-                  <Navbar.Brand href="#home"><img className="logo" src={reactLogo3} alt="logo"></img>   </Navbar.Brand>
+                  <Navbar.Brand href="/"><img className="logo" src={reactLogo3} alt="logo"></img>   </Navbar.Brand>
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
@@ -24,7 +24,6 @@ export const Header = () =>{
                       <Link to="/productos/calzas" className="menu_desplegable">Calzas</Link>
                       <Link to="/productos/remeras" className="menu_desplegable">Remeras</Link>
                       <Link to="/nosotros" className="menu_desplegable">Nosotros</Link>
-                      
                     </Nav>
                   </Navbar.Collapse>
                 </Container>

@@ -1,27 +1,14 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  .contenedorTitulo{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(172, 171, 171);
-    height: 100px;
-    width: 100%;
-  }
-  .tituloPrincipal{
-    align-items: center;
-    
-  }
   .contenedor{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
   .contenedorProductos{
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
   }

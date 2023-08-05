@@ -122,78 +122,22 @@ export const Checkout = () => {
 
                   {()=>(
                     <Form>
+                      <h3 className='datos'>Ingresa tus datos</h3>
                         <Field className="form-control my-2" placeholder= "nombre" type="text" name="nombre" />
                         <ErrorMessage name="nombre" component="p" />
                         <Field className="form-control my-2" placeholder= "apellido" type="text" name="apellido" />
                         <ErrorMessage name="apellido" component="p"/>
                         <Field className="form-control my-2" placeholder= "email" type="email" name="email" />
                         <ErrorMessage name="email" component="p"/>
-                        <Button type="submit">Enviar</Button>
+                        <Button type="submit" className='enviar'>Enviar</Button>
                     </Form>
                   )}
-              </Formik>
-
-
-              {/* <form onSubmit={handleSubmit}>
-                <Row>
-                  <Form.Label column lg={2}>
-                    Nombre
-                  </Form.Label>
-                  <Col>
-                    <Form.Control 
-                        onChange={handleInputChange}
-                        value= {values.nombre}
-                        type="text"
-                        placeholder="" 
-                        name="nombre"
-                        />
-                  </Col>
-                </Row>  
-                <br />
-                <Row>
-                  <Form.Label column lg={2}>
-                    Apellido
-                  </Form.Label>
-                  <Col>
-                    <Form.Control 
-                        onChange={handleInputChange}
-                        value= {values.apellido}
-                        type="text" 
-                        placeholder=""
-                        name="apellido"
-                         />
-                  </Col>
-                </Row>  
-                <br />
-
-                <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                    <Form.Label column sm={2} className='marginContacto'>
-                      Email
-                    </Form.Label>
-                    <Col sm={10}>
-                      <Form.Control 
-                          onChange={handleInputChange}
-                          value= {values.email}
-                          type="email" 
-                          placeholder="" 
-                          name="email"/>
-                    </Col>
-                </Form.Group>
-
-                <Form.Group as={Row} className="mb-3">
-                    <Col sm={{ span: 10, offset: 2 }}>
-                      <Button type="submit">Enviar</Button>
-                    </Col>
-                </Form.Group>
-
-              </form> */}
-              
+              </Formik>              
   
-                </div>
-                    <div className='contenedorContactoFoto'>
-                        
-                        <img className="imagenContacto" src="/estirando.png" alt="mujer estirando"/>
-                    </div>
+              </div>
+              <div className='contenedorContactoFoto'>    
+                  <img className="imagenContacto" src="/estirando.png" alt="mujer estirando"/>
+              </div>
                     
             </div>
     </div>

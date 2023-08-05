@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 const ItemDetail = ({item}) => {
    const { agregarAlCarrito, isInCart } = useContext(CartContext)
-   console.log(isInCart(item.id))
+  
 
     const [cantidad, setCantidad] = useState(1)
     
@@ -25,7 +25,7 @@ const ItemDetail = ({item}) => {
     return (
 
         <div className='containerItem'>
-            <Card style={{ width: '30rem' }} >
+            <Card style={{ width: '40rem' }} >
                 <Card.Title className='titulo_cardItem'>{item.nombre}</Card.Title>
                 <Card.Img variant='top' src={item.imagen} />
                 <Card.Body>
@@ -42,7 +42,7 @@ const ItemDetail = ({item}) => {
                 {
                     isInCart (item.id)
                     ? <div className='formato'>
-                        <Link to="/cart" className="btn irAlCarrito">Ir al carrito</Link>,
+                        <Link to="/cart" className="btn irAlCarrito">Ir al carrito</Link>
                         <Link to="/todos" className="btn irAlCarrito">Seguir comprando</Link>
                         </div>
                     :   

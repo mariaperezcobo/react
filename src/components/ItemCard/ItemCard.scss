@@ -4,10 +4,14 @@
     box-sizing: border-box;
   }
   .margin{
-    margin: 2px;
-    padding: 10px;
-    display: flex;
-    flex-wrap: nowrap;
+    margin: 20px;
+    
+   justify-content: center;
+   align-items: center;
+   
+   
+   display: flex;
+    
   }
 
   .ultimas{
@@ -24,8 +28,8 @@
     height: 25px;
   }
   .boton_agregar{
-    
-    height: 25px;
+    font-size: 18px;
+   
   }
 
 @media screen and (max-width: 734px) {

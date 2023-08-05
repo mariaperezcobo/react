@@ -1,6 +1,5 @@
 import './ItemListContainer.scss'
 import {useEffect, useState} from 'react'
-// import { pedirDatos } from '../../helpers/pedirDatos';
 import { ItemList } from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import { Loader } from '../Loader/Loader';
@@ -39,25 +38,12 @@ export const ItemListContainer = () => {
 
         }, [categoryId])
 
-    //     pedirDatos()
-    //     .then(r => {
-    //        if (categoryId) {
-    //         setProductos (r.filter(prod => prod.categoria === categoryId))
-    //        } else  {
-    //         setProductos(r)
-    //        }
-    //     })
-    //     .catch (error => console.log(error))
-    //     .finally(()=> setLoading(false))
-    // }, [categoryId])
-
-
-    return (
+       return (
         <div>
             {
                 loading
                 ? <Loader />
-                :    <div className='contenedor'>
+                :    <div >
                         <Title>{categoryId ? categoryId.toUpperCase() : "Todos los productos"}</Title>  
                         
                        
