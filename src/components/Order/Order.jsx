@@ -11,8 +11,7 @@ export const Order = ({children}) =>{
                     <p>El numero de orden es: <strong>{children}</strong> </p>
                     <p>Te avisaremos cuando tu pedido este listo!</p>
                 </div>  
-                <div className='contenedorNroOrden'>
-                                
+                <div className='contenedorNroOrden2'>         
                      <img className="imagen" src="/calzas3.png" alt="mujer en la playa"/>
                  </div>
             </div>

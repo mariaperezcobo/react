@@ -5,6 +5,8 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
+    
   }
 
   .datos{
@@ -15,10 +17,10 @@
   }
   .contenedorContactoFotoyTexto{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 80%;
     background-color: rgb(180, 196, 196);
   }
 
@@ -26,7 +28,7 @@
    
     align-items: center;
     justify-content: center;
-    width: 55%;
+    // width: 55%;
     padding: 30px;
     
   }
@@ -34,7 +36,7 @@
     
      align-items: center;
      justify-content: center;
-     width: 45%;
+    //  width: 45%;
      display: flex;
      flex-wrap: nowrap;
      padding: 20px;

@@ -4,20 +4,16 @@
     font-size: 28px;
     margin: 40px;
 }
-
  .carritoVacio{
     margin: 50px 10px 10px 40px;
     font-size: 36px;
  } 
-
  .contenedor_emptyCard{
    display: flex;
    flex-wrap: nowrap;
    align-items: center;
    justify-content: center;
  }
-
-
  .contenedorEmptyCard2{
    display: flex;
    flex-wrap: wrap;
@@ -30,17 +26,21 @@
 
  .contenedor_1{
    display: flex;
-  
-   align-items: center;
-   justify-content: center;
-   width: 100%;
-   ;
- }
- .contenedor_2{
-   display: flex;
-  
    align-items: center;
    justify-content: center;
    width: 100%;
    
+ }
+ .contenedor_2{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+ }
+ .contenedorFotoEmptyCard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 20px;
  }

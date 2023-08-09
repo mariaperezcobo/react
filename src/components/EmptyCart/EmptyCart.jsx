@@ -12,6 +12,9 @@ export const EmptyCart = () => {
                 <div className="contenedor_2">
                 <Link to='/todos' className='total_Producto btn btn-secondary' variant='outline-secondary' >Ir a productos</Link> 
                 </div>
+                <div className='contenedorFotoEmptyCard'>         
+                     <img className="imagen" src="/estirando.png" alt="mujer estirando"/>
+                 </div>
             </div>
             </div>
         
