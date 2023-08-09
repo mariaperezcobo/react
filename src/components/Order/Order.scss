@@ -27,6 +27,17 @@
     font-size: 40px;
     
 }
+.contenedorNroOrden2{
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 25px;
+    width: 100%;
+    
+}
 
 .contenedorNroOrden{
     width: 100%;
@@ -34,34 +45,28 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 5px;
     font-size: 25px;
     
 }
-.contenedorNroOrden2{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-   
-}
 
-@media screen and (max-width: 616px) {
+
+@media screen and (max-width: 820px) {
    
     .contenedorNroOrden{
-      
-      font-size: 26px;
-   
+      font-size: 22px;
     }  
+    .contenedorNroOrden2{
+        font-size: 22px;
+      } 
 }
 
 @media screen and (max-width: 510px) {
    
     .contenedorNroOrden{
-      
-      font-size: 20px;
-     
+      font-size: 20px
     }  
+    .contenedorNroOrden2{
+        font-size: 20px;
+      } 
 }
